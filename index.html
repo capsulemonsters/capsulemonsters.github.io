@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8"/>
+    <title>Poketto Monstaa - A Pokémon fans development community.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+<div class="hero is-fullheight is-black">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <img src="img/avatar.png"/>
+            <h1 class="title">Poketto Monstaa</h1>
+            <a class="button is-white is-outlined">Github</a>
+            <a class="button is-white is-outlined">Twitter</a>
+            <a id="play" class="button is-white is-outlined" onclick="BGM.toggle();">???</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var BGM = {
+        audio: null,
+        file: "audio/bgm.mp3",
+        toggle: function () {
+            if (!this.audio) {
+                this.audio = new Audio(this.file);
+            }
+            var playBtn = document.getElementById('play');
+
+            if (this.audio.paused) {
+                this.audio.play();
+                playBtn.innerHTML = '&#x1f47b; &#x1f47b; &#x1f47b;';
+            } else {
+                this.audio.pause();
+                playBtn.innerHTML = '???';
+            }
+        }
+    };
+</script>
+<!--
+
+DISCLAIMER
+
+This website and all related projects may come bundled with data and graphics extracted from the
+Pokémon series of video games.
+
+Some terminology from the Pokémon franchise is also necessarily used within the site and projects themselves.
+The above mentioned are all the intellectual property of Nintendo, Creatures, inc., and GAME FREAK, inc.
+and are protected by various copyrights and trademarks.
+
+The authors believe that the usage of this intellectual property for a fan reference and learning purposes
+is covered by fair use and that the software is significantly impaired without said property included.
+
+This software is not affiliated in any way with Nintendo, Pokémon or any other game company.
+
+Any other different usage of the mentioned copyrighted properties will be at your own legal risk.
+
+-->
+</body>
+</html>

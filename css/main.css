@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'GB Regular';
+    src: url('../fonts/gb_regular.woff2') format('woff2'),
+    url('../fonts/gb_regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, button, input, select, textarea {
+    font-family: 'GB Regular', Menlo, monospace;
+}
