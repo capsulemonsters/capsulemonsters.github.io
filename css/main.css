@@ -9,3 +9,7 @@
 html, body, button, input, select, textarea {
     font-family: 'GB Regular', Menlo, monospace;
 }
+
+.container h1.title {
+    margin-bottom: 1.5rem;
+}
