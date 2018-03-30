@@ -6,10 +6,125 @@
     font-style: normal;
 }
 
-html, body, button, input, select, textarea {
-    font-family: 'GB Regular', Menlo, monospace;
-}
-
 .container h1.title {
     margin-bottom: 1.5rem;
+}
+
+.hero.is-black {
+    background-color: #646464;
+}
+
+html, body {
+    position: static
+}
+
+body * {
+    position: relative
+}
+
+html, body {
+    font-family: 'GB Regular', Menlo, monospace;
+    color: #fff;
+    background: #000;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#play {
+    cursor: pointer;
+}
+
+.main-footer {
+    padding: 10px;
+    font-size: 8px;
+    opacity: 0.2;
+    text-align: right;
+}
+
+.main-footer:hover {
+    opacity: 0.8;
+}
+
+.game-viewport {
+    background: #333 linear-gradient(
+            to bottom,
+            #333 0%,
+            rgba(0, 0, 0, 0.8) 40%, /* #000 */ #333 60%,
+            #333 100%
+    );
+    overflow: hidden;
+}
+
+.strocked {
+    color: white;
+    text-shadow: 3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    font-weight: 800;
+}
+
+.button.is-white.is-outlined {
+    background-color: #000;
+}
+
+.game-viewport::before {
+    position: absolute;
+    content: '';
+    top: 15px;
+    left: -500px;
+    right: -500px;
+    bottom: -100px;
+    opacity: 0.7;
+    /*transform: perspective(100px) rotateX(45deg) skewX(0deg) scale(1) translate(0px, 0px);*/
+    transform: perspective(400px) rotateX(75deg);
+    overflow: hidden;
+    background-size: 90px 90px;
+    background-image: linear-gradient(
+            0deg,
+            transparent 24%,
+            #000 25%,
+            #000 26%,
+            transparent 27%,
+            transparent 74%,
+            #000 75%,
+            #000 76%,
+            transparent 77%,
+            transparent
+    ),
+    linear-gradient(
+            90deg,
+            transparent 24%,
+            #000 25%,
+            #000 26%,
+            transparent 27%,
+            transparent 74%,
+            #000 75%,
+            #000 76%,
+            transparent 77%,
+            transparent
+    );
+}
+
+.game-horizon > * {
+    transform: perspective(-100px) rotateX(-45deg) skewX(0deg) scale(1) translate(0px, 0px);
+}
+
+.floating-sprite {
+    animation: floating-animation 1000ms cubic-bezier(.35, .45, .20, 1) alternate infinite;
+}
+
+/* Standard syntax */
+@keyframes floating-animation {
+    from {
+        transform: translate(0, 0px);
+    }
+    40% {
+        transform: translate(0, -6%);
+    }
+    to {
+        transform: translate(0, -0px);
+    }
 }

@@ -2,55 +2,78 @@
 <html>
 <head>
     <meta charset="utf8"/>
-    <title>Capsule Monsters. - Collection of Pokémon projects developed by fans for fans, with 🖤</title>
+    <title>Capsule Monsters - Collection of Pokémon projects developed by fans for fans, with 🖤</title>
+    <link type="image/png" rel="shortcut icon" href="img/capsule-dragon.png"/>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85082661-4"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());gtag('config', 'UA-85082661-4');
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+      gtag('config', 'UA-85082661-4');
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css"/>
-    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
+    <link rel="stylesheet" href="css/main.css?v=2"/>
 </head>
 <body>
-<div class="hero is-fullheight is-black">
+<div class="hero is-fullheight is-black game-viewport">
     <div class="hero-body">
         <div class="container has-text-centered">
             <div title="Capsule Monsters. - A collection of Pokémon projects developed by fans for fans, with 🖤">
-                <img src="img/avatar.png" alt="Retro Gengar"/>
-                <h1 class="title">Capsule Monsters.</h1>
+                <img id="play" class="floating-sprite" src="img/capsule-dragon.png" alt="Dragon 1"/>
+                <h1 class="title strocked">Capsule Monsters</h1>
             </div>
-            <a class="button is-white is-outlined" href="https://github.com/capsulemonsters">Github</a>
-            <a class="button is-white is-outlined" href="https://github.com/orgs/capsulemonsters/people">Team</a>
-            <a id="play" class="button is-white is-outlined" onclick="BGM.toggle();">???</a>
+            <a class="button is-black" href="https://github.com/capsulemonsters"
+               title="Source Code available on Github">
+                Projects</a>
+            <a class="button is-black" href="https://www.patreon.com/itsjavi"
+               title="Support these projects by helping the developers buying some beers 🍻 :)">
+                Send
+                <span style="font-size:130%; margin-left:10px;"> &heartsuit;</span>
+            </a>
+            <!--<a id="play" class="button is-black" title="Boo!">???</a>-->
         </div>
     </div>
+    <footer class="main-footer">
+        by <a href="https://itsjavi.com" target="_blank">@itsjavi</a>
+        and <a href="https://virtuamon.com" target="_blank">@virtuamon</a>
+    </footer>
 </div>
 <script type="text/javascript">
-    var BGM = {
-        audio: null,
-        file: "audio/bgm.mp3",
-        toggle: function () {
-            if (!this.audio) {
-                this.audio = new Audio(this.file);
-            }
-            var playBtn = document.getElementById('play');
+  var playBtn = document.getElementById('play');
+  var BGM = {
+    audio: null,
+    file: "audio/bgm.mp3",
+    toggle: function () {
+      if (!this.audio) {
+        this.audio = new Audio(this.file);
+      }
 
-            if (this.audio.paused) {
-                this.audio.play();
-                playBtn.innerHTML = '&#x1f47b; &#x1f47b; &#x1f47b;';
-            } else {
-                this.audio.pause();
-                playBtn.innerHTML = '???';
-            }
-        }
-    };
+      if (this.audio.paused) {
+        this.audio.play();
+        // playBtn.innerHTML = '&#x1f47b; &#x1f47b; &#x1f47b;';
+      } else {
+        this.audio.pause();
+        // playBtn.innerHTML = '???';
+      }
+    }
+  };
+  playBtn.onclick = function (ev) {
+    BGM.toggle();
+  };
 </script>
 <!--
 
 DISCLAIMER
 
 This website and all related projects may come bundled with data and graphics extracted from the
-Pokémon series of video games.
+Pokémon series of video games, originally named Capsule Monsters or Capumon in their origins.
+
+The usage of the "Capsule Monsters" name is in any case intended for commercial purposes, it is purely referential.
+We chose to name this site and projects like that to honor the original name and our love for Pokemon.
 
 Some terminology from the Pokémon franchise is also necessarily used within the site and projects themselves.
 The above mentioned are all the intellectual property of Nintendo, Creatures, inc., and GAME FREAK, inc.
