@@ -1,1 +1,1 @@
-https://capsule-monsters.com
+https://capsumon.com
