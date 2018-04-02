@@ -35,15 +35,14 @@ html, body {
     cursor: pointer;
 }
 
-.main-footer {
-    padding: 10px;
+.hero-foot {
+    padding: 10px 10px 25px 10px;
     font-size: 8px;
-    opacity: 0.2;
-    text-align: right;
+    color: rgba(255,255,255,0.3);
 }
 
-.main-footer:hover {
-    opacity: 0.8;
+.hero-foot a:hover {
+    color: #ffffff !important;
 }
 
 .game-viewport {
