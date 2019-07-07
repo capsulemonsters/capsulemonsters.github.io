@@ -1,71 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf8"/>
     <title>Capsule Monsters - Collection of Pokémon projects developed by fans for fans, with 🖤</title>
-    <link type="image/png" rel="shortcut icon" href="img/capsule-dragon.png"/>
+    <link type="image/png" rel="shortcut icon" href="img/favicon.png"/>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85082661-4"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-      gtag('js', new Date());
-      gtag('config', 'UA-85082661-4');
+        gtag('js', new Date());
+        gtag('config', 'UA-85082661-4');
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
-    <link rel="stylesheet" href="css/main.css?v=3"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"/>
+    <link rel="stylesheet" href="css/main.css?v=4"/>
 </head>
 <body>
 <div class="hero is-fullheight is-black game-viewport">
     <div class="hero-body">
         <div class="container has-text-centered">
             <div title="Capsule Monsters. - A collection of Pokémon projects developed by fans for fans, with 🖤">
-                <img id="play" class="floating-sprite" src="img/capsule-dragon.png" alt="Dragon 1"/>
+                <a href="https://github.com/capsulemonsters"><img class="floating-sprite" src="img/logo.png" alt="logo"/></a>
                 <h1 class="title strocked">Capsule Monsters</h1>
             </div>
-            <a class="button is-black" href="https://github.com/capsulemonsters"
-               title="Source Code available on Github">
-                Projects</a>
-            <a class="button is-black"
-               href="https://github.com/itsjavi/itsjavi.github.io/blob/master/BACKERS.md#sponsors--backers"
-               title="Support these projects by helping the developers buying some beers 🍻 :)">
-                Donate
-                <span style="font-size:130%; margin-left:10px;"> &heartsuit;</span>
-            </a>
-            <!--<a id="play" class="button is-black" title="Boo!">???</a>-->
+            <a class="button is-black" href="https://github.com/capsulemonsters" target="_blank">Projects</a>
+            <a class="button is-black" href="https://twitter.com/virtuamon" target="_blank">News</a>
         </div>
     </div>
     <footer class="hero-foot">
         Created by <a href="https://itsjavi.com" target="_blank">@itsjavi</a>
-        with <a href="https://bulma.io" target="_blank">Bulma</a>
+        with <a href="https://bulma.io" target="_blank" rel="nofollow">Bulma</a>
     </footer>
 </div>
-<script type="text/javascript">
-  var playBtn = document.getElementById('play');
-  var BGM = {
-    audio: null,
-    file: "audio/bgm.mp3",
-    toggle: function () {
-      if (!this.audio) {
-        this.audio = new Audio(this.file);
-      }
-
-      if (this.audio.paused) {
-        this.audio.play();
-        // playBtn.innerHTML = '&#x1f47b; &#x1f47b; &#x1f47b;';
-      } else {
-        this.audio.pause();
-        // playBtn.innerHTML = '???';
-      }
-    }
-  };
-  playBtn.onclick = function (ev) {
-    BGM.toggle();
-  };
-</script>
 <!--
 
 DISCLAIMER
