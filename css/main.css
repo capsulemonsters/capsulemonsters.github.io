@@ -6,29 +6,25 @@
     font-style: normal;
 }
 
-.container h1.title {
-    margin-bottom: 1.5rem;
-}
-
-.hero.is-black {
-    background-color: #646464;
-}
-
 html, body {
-    position: static
+    position: static;
 }
 
 body * {
-    position: relative
+    position: relative;
 }
 
 html, body {
     font-family: 'GB Regular', Menlo, monospace;
     color: #fff;
-    background: #b9b9b9;
+    background: #2c2c2c;
     margin: 0;
     padding: 0;
     text-align: center;
+}
+
+.container h1.title {
+    margin-bottom: 1.5rem;
 }
 
 img.floating-sprite {
@@ -53,14 +49,9 @@ a {
 }
 
 .game-viewport {
-    background: #b9b9b9 linear-gradient(
-            to bottom,
-            #b9b9b9 0%,
-            #b9b9b988 40%, #b9b9b988 60%,
-            #b9b9b9 100%
-    );
+    background: #0ebed0;
     overflow: hidden;
-    border: 10px inset #2c2c2c;
+    box-shadow: inset #2c2c2c 0px 0px 0px 10px;
 }
 
 .strocked {
@@ -79,48 +70,6 @@ a {
 
 .button.is-black {
     background: #2c2c2c;
-}
-
-.game-viewport::before {
-    position: absolute;
-    content: '';
-    top: 15px;
-    left: -500px;
-    right: -500px;
-    bottom: -100px;
-    opacity: 0.7;
-    /*transform: perspective(100px) rotateX(45deg) skewX(0deg) scale(1) translate(0px, 0px);*/
-    transform: perspective(400px) rotateX(75deg);
-    overflow: hidden;
-    background-size: 80px 80px;
-    background-image: linear-gradient(
-            0deg,
-            transparent 24%,
-            #b9b9b9 25%,
-            #b9b9b9 26%,
-            transparent 27%,
-            transparent 74%,
-            #b9b9b9 75%,
-            #b9b9b9 76%,
-            transparent 77%,
-            transparent
-    ),
-    linear-gradient(
-            90deg,
-            transparent 24%,
-            #b9b9b9 25%,
-            #b9b9b9 26%,
-            transparent 27%,
-            transparent 74%,
-            #b9b9b9 75%,
-            #b9b9b9 76%,
-            transparent 77%,
-            transparent
-    );
-}
-
-.game-horizon > * {
-    transform: perspective(-100px) rotateX(-45deg) skewX(0deg) scale(1) translate(0px, 0px);
 }
 
 .floating-sprite {
