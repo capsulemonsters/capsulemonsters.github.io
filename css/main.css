@@ -49,7 +49,7 @@ a {
 }
 
 .game-viewport {
-    background: #0ebed0;
+    background: #fff;
     overflow: hidden;
     box-shadow: inset #2c2c2c 0px 0px 0px 10px;
 }
